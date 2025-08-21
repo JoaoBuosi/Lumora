@@ -118,29 +118,44 @@ body {
 
 .chat-box {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
   overflow-y: auto;
-  padding-bottom: 80px;
+  align-items: center; /* centraliza visualmente */
 }
 
 .chat-message {
-  max-width: 75%;
-  margin-bottom: 10px;
+  display: inline-block;
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 16px;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 75%;   /* limite para não ficar enorme */
+  min-width: 40px;
+  position: relative;
 }
 
+/* Usuário → Direita */
 .user-message {
   background: #cfcfcf;
   color: #191918;
-  margin-left: auto;
+  align-self: flex-end; /* joga para direita */
+  border-bottom-right-radius: 4px; /* detalhe estilo chat */
+  text-align: left;
 }
 
+/* IA → Esquerda */
 .bot-message {
   background: #fdfdfd;
   color: #333;
-  margin-right: auto;
+  align-self: flex-start; /* joga para esquerda */
+  border-bottom-left-radius: 4px;
+  text-align: left;
 }
+
 
 /* Área de input estilo apps de chat */
 .input-area {
@@ -235,3 +250,7 @@ body {
     margin-left: 0 !important; /* ocupa tela toda */
   }
 }
+
+  }
+}
+
