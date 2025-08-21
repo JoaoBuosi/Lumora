@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard IA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar hidden" id="sidebar">
+      <div class="sidebar-header">
+        
+        <button id="close-sidebar">✖</button>
+      </div>
+      <ul>
+        <li>📊 CSV/Chat</li>
+        <li>💬 Free Chat</li>
+        <li>📑 Relatórios</li>
+        <li>➕ Novo Chat</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header com botão de menu -->
+      <header class="header">
+        <button id="toggle-sidebar">☰</button>
+        <h1>Lumora</h1>
+      </header>
+
+      <!-- Chat -->
+      <div class="chat-container">
+        <div id="chat-box" class="chat-box">
+          <!-- Pergunte alguma coisa -->
+        </div>
+      </div>
+
+<!-- Campo de texto estilo Chat -->
+<div class="input-area">
+  <div class="input-box">
+    <span class="input-icon">➕</span>
+    <textarea id="user-input" rows="1" placeholder="Digite sua mensagem..."></textarea>
+    <button class="send-btn" onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+
+    </main>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
